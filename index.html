@@ -72,7 +72,7 @@
     </div>
     <div class="badge3d" id="badge3d"><div><div class="rt"><span class="star">★</span> 4.7</div><div class="rl">Birdeye rating</div></div></div>
     <span class="grab" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v6M8 5l4-2 4 2M4 12a8 8 0 0 0 16 0"/></svg> Drag &amp; scroll</span>
-    <div class="cue" aria-hidden="true">Scroll to explode<span class="bar"></span></div>
+    <div class="cue" aria-hidden="true">Scroll to explore<span class="bar"></span></div>
     <div class="hprog" aria-hidden="true"><i id="hprog"></i></div>
   </div>
 </header>
@@ -162,6 +162,12 @@
   </div>
 </section>
 
+<section class="obj3dband" aria-label="Interactive 3D Brake rotor">
+  <div class="wrap o3b">
+    <div class="o3b-art up"><canvas class="obj3d" data-obj="rotor" data-accent="c0392b" aria-label="Interactive 3D Brake rotor"></canvas></div>
+    <div class="o3b-copy up"><p class="kick">Interactive · Brake rotor</p><h2>Built in the browser, not a photo.</h2><p>Every one of these is a real interactive 3D model, drawn live. Drag it to spin it. The same craft goes into the whole site.</p><span class="drag">Drag to spin</span></div>
+  </div>
+</section>
 <section id="why">
   <div class="wrap">
     <p class="kick up"><span class="jp">専門</span> Why Hiro's</p>
@@ -200,6 +206,12 @@
   </div>
 </section>
 
+<section class="obj3dband alt" aria-label="Interactive 3D Engine block">
+  <div class="wrap o3b">
+    <div class="o3b-art up"><canvas class="obj3d" data-obj="engine" data-accent="1f4e8c" aria-label="Interactive 3D Engine block"></canvas></div>
+    <div class="o3b-copy up"><p class="kick">Interactive · Engine block</p><h2>Real 3D, right on the page.</h2><p>No video, no image. A true model you can grab and turn, the kind of detail that makes a site feel built, not bought.</p><span class="drag">Drag to spin</span></div>
+  </div>
+</section>
 <section id="gallery">
   <div class="wrap">
     <p class="kick up">The shop</p>
@@ -216,12 +228,11 @@
   </div>
 </section>
 
-<section id="explore3d" class="show3d">
-  <div class="wrap">
-    <p class="kick up">In the bay</p>
-    <h2 class="up">The parts we know cold, in 3D.</h2>
-    <p class="sub up">Drag any part to rotate it. A small taste of the interactive detail we build into every page.</p>
-    <div class="o3grid"><figure class="o3 up"><canvas class="obj3d" data-obj="rotor" data-accent="c0392b" aria-label="Interactive 3D Brake rotor"></canvas><figcaption>Brake rotor<span class="drag">drag to spin</span></figcaption></figure><figure class="o3 up"><canvas class="obj3d" data-obj="engine" data-accent="1f4e8c" aria-label="Interactive 3D Engine block"></canvas><figcaption>Engine block<span class="drag">drag to spin</span></figcaption></figure><figure class="o3 up"><canvas class="obj3d" data-obj="muffler" aria-label="Interactive 3D Muffler"></canvas><figcaption>Muffler<span class="drag">drag to spin</span></figcaption></figure></div>
+
+<section class="obj3dband" aria-label="Interactive 3D Muffler">
+  <div class="wrap o3b">
+    <div class="o3b-art up"><canvas class="obj3d" data-obj="muffler" aria-label="Interactive 3D Muffler"></canvas></div>
+    <div class="o3b-copy up"><p class="kick">Interactive · Muffler</p><h2>A little motion, on purpose.</h2><p>Small interactive touches like this are what make a page memorable. Drag it around and see.</p><span class="drag">Drag to spin</span></div>
   </div>
 </section>
 <section id="reviews" class="band">
@@ -276,6 +287,6 @@
 </div>
 
 <script src="assets/app.js" defer></script>
-<script type="module" src="assets/hero3d.js"></script><script type="module" src="assets/objects3d.js"></script>
+<script type="module" src="assets/hero3d.js"></script><script type="module" src="assets/objects3d.js?v=2"></script>
 </body>
 </html>
