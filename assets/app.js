@@ -45,6 +45,9 @@ var REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
 })();
 (function(){ /* cinematic garage scene (scroll-scrubbed) */
   var scene=document.getElementById('garage'); if(!scene)return;
+  var gsvg=scene.querySelector('.gsvg');
+  function setPAR(){if(gsvg)gsvg.setAttribute('preserveAspectRatio', matchMedia('(max-width:820px)').matches?'xMidYMid meet':'xMidYMax slice');}
+  setPAR(); addEventListener('resize',setPAR);
   var car=document.getElementById('g-car'), lift=document.getElementById('g-lift'), pts=document.querySelectorAll('#garage .g-pt'), steps=document.querySelectorAll('#garage .g-step');
   scene.__onscrub=function(p){
     // 0-.30 car drives in; .30-.55 lift raises; .55-1 inspection points ping
@@ -57,6 +60,15 @@ var REDUCE=matchMedia('(prefers-reduced-motion: reduce)').matches;
     steps.forEach(function(s,i){var seg=i/steps.length, seg2=(i+1)/steps.length;var a=(p>=seg-0.02&&p<seg2+0.05)?1:(p<seg?0:0);s.style.opacity=(p>=seg&&p<seg2+0.08)?1:0.18;});
   };
   if(REDUCE){scene.__onscrub(1);}
+})();
+(function(){ /* header tightens on scroll */
+  var h=document.getElementById('sitehead'); if(!h)return;
+  function on(){h.classList.toggle('scrolled',(window.scrollY||0)>44);}
+  addEventListener('scroll',on,{passive:true}); on();
+})();
+(function(){ /* back to top */
+  var b=document.getElementById('backtop'); if(!b)return;
+  b.addEventListener('click',function(){window.scrollTo({top:0,behavior:REDUCE?'auto':'smooth'});});
 })();
 (function(){ /* appointment form (truthful preview state) */
   var f=document.getElementById('bookform'); if(!f)return;

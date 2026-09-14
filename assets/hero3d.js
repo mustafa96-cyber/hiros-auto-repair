@@ -74,7 +74,7 @@ try{
     if(!reduce&&!dragging) wheel.rotation.z-=0.004*(1-e*0.8);
     wheel.rotation.y=0.55+tx+dragAz+p*Math.PI*0.4;wheel.rotation.x=-0.2-ty;
     const baseX=nw?0:2.4;wheel.position.x=baseX-(nw?0:1.3)*e;
-    wheel.position.y=(nw?-2.0:0)+Math.sin(t*0.6)*0.06;wheel.scale.setScalar((nw?0.5:1)*(1-0.06*e));
+    wheel.position.y=Math.sin(t*0.6)*0.06;wheel.scale.setScalar((nw?0.82:1)*(1-0.06*e));
     shadow.position.x=wheel.position.x;shadow.material.opacity=(nw?.5:.65)*(1-0.4*e);
     camera.position.z=8-0.7*e;camera.position.y=0.15+0.25*e;
     if(!reduce){points.rotation.y+=0.0008;points.rotation.z+=0.0004;}
