@@ -79,9 +79,9 @@ try{
     camera.position.z=8-0.7*e;camera.position.y=0.15+0.25*e;
     if(!reduce){points.rotation.y+=0.0008;points.rotation.z+=0.0004;}
     const aOp=1-ss(0.05,0.26,p);
-    if(stageA){stageA.style.opacity=aOp;stageA.style.transform='translateY('+(-24*ss(0.05,0.3,p))+'px)';stageA.style.pointerEvents=aOp<0.15?'none':'auto';}
+    if(stageA){stageA.style.opacity=aOp;stageA.style.transform='translateY('+(-20*ss(0.05,0.26,p))+'px)';stageA.style.pointerEvents=aOp<0.15?'none':'auto';}
     if(badge)badge.style.opacity=aOp;
-    if(stageB){stageB.style.opacity=ss(0.34,0.52,p)*(1-ss(0.92,1,p));stageB.style.transform='translateY(calc(-50% + '+(22*(1-ss(0.34,0.52,p)))+'px))';}
+    if(stageB){stageB.style.opacity=ss(0.14,0.32,p)*(1-ss(0.92,1,p));stageB.style.transform='translateY(calc(-50% + '+(22*(1-ss(0.34,0.52,p)))+'px))';}
     if(hprog)hprog.style.width=(p*100).toFixed(1)+'%';
     renderer.render(scene,camera);}
   loop();
